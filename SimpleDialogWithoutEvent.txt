@@ -1,0 +1,28 @@
+import java.awt.*;
+
+public class SimpleDialogWithoutEvents extends Frame {
+    public SimpleDialogWithoutEvents() {
+        
+        setTitle("Simple Dialog Example");
+        setSize(300, 200);
+        setLayout(new FlowLayout());
+
+        
+        Dialog dialog = new Dialog(this, "Dialog", true);
+        dialog.setLayout(new FlowLayout());
+        dialog.add(new Label("Hello! This is a dialog box."));
+        Button okButton = new Button("OK");
+        dialog.add(okButton);
+
+        
+        dialog.setSize(200, 100);
+        dialog.setVisible(true);
+
+       
+        System.exit(0);
+    }
+
+    public static void main(String[] args) {
+        new SimpleDialogWithoutEvents();
+    }
+}

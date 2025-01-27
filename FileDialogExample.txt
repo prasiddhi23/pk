@@ -1,0 +1,19 @@
+import java.awt.*;
+
+public class FileDialogExample extends Frame {
+    public FileDialogExample() {
+        setTitle("Simple File Dialog Example");
+        setSize(400, 300);
+
+        
+        FileDialog fileDialog = new FileDialog(this, "Open File", FileDialog.LOAD);
+        fileDialog.setVisible(true);
+
+       
+        String file = fileDialog.getFile();
+        String directory = fileDialog.getDirectory();
+
+        if (file != null) {
+            System.out.println("Selected File: " + directory + file);
+        } else {
+            System.out.println("No file sele
